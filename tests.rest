@@ -1,0 +1,30 @@
+
+###
+# Let's send some json to google
+post http://localhost:3000/jq:.%5B0%5D/target:http%3A%2F%2Fgoogle.com
+content-type: application/json
+
+[
+  {"name":"JSON", "good":true}, 
+  {"name":"XML", "good":false}
+]
+
+
+###
+# This one should return an error
+post http://localhost:3000/plop
+content-type: application/json
+
+{
+  "text": "plop"
+}
+
+###
+# This one is fun
+post http://localhost:3000/target:http%3A%2F%2Flocalhost%3A3000%2Ftarget%3Ahttp%253A%252F%252Flocalhost%253A3000%252Ftarget%253Ahttp%25253A%25252F%25252Flocalhost%25253A3000
+content-type: application/json
+
+[
+  {"name":"JSON", "good":true}, 
+  {"name":"XML", "good":false}
+]

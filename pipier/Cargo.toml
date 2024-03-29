@@ -1,0 +1,28 @@
+[package]
+name = "pipier"
+edition.workspace = true
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tracing = { workspace = true }
+pretty_env_logger = { workspace = true }
+thiserror = { workspace = true }
+clap = { workspace = true }
+tokio = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+axum = { workspace = true }
+anyhow = { workspace = true }
+http = { workspace = true }
+urlencoding = { workspace = true }
+
+jaq-core = { workspace = true }
+jaq-std = { workspace = true }
+jaq-interpret = { workspace = true }
+jaq-parse = { workspace = true }
+jaq-syn = { workspace = true }
